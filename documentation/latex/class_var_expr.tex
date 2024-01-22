@@ -1,0 +1,127 @@
+\hypertarget{class_var_expr}{}\doxysection{Var\+Expr Class Reference}
+\label{class_var_expr}\index{VarExpr@{VarExpr}}
+Inheritance diagram for Var\+Expr\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_var_expr}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_var_expr_a7956ed8709bf0c1875624d332c0f1580}\label{class_var_expr_a7956ed8709bf0c1875624d332c0f1580}} 
+{\bfseries Var\+Expr} (std\+::string var)
+\item 
+bool \mbox{\hyperlink{class_var_expr_ad8f1407b712f3c8d7c78dfd4eb0708e6}{equals}} (\mbox{\hyperlink{class_expr}{Expr}} $\ast$e)
+\begin{DoxyCompactList}\small\item\em check if two Var\+Exprs are equal \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_var_expr_a79991fba1d40718c3074181d129d1ddf}{interp}} ()
+\begin{DoxyCompactList}\small\item\em returns an int for the value of an expression \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_var_expr_ad8e3aab06e58615fe677a7a45d6cf32e}{has\+\_\+variable}} ()
+\begin{DoxyCompactList}\small\item\em returns true if the expression is a variable or contains a variable \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_expr}{Expr}} $\ast$ \mbox{\hyperlink{class_var_expr_afa8d617ffc16182de004bb0417a588b5}{subst}} (std\+::string parameter, \mbox{\hyperlink{class_expr}{Expr}} $\ast$expr)
+\begin{DoxyCompactList}\small\item\em everywhere that the expression contains a variable matching the string, the result Expr$\ast$ should have the given replacement \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \mbox{\hyperlink{class_expr_abf9cdb765fb84304881789d273d7594f}{equals}} (\mbox{\hyperlink{class_expr}{Expr}} $\ast$e)=0
+\item 
+virtual int \mbox{\hyperlink{class_expr_aeba8585d8225419d49166371306542c1}{interp}} ()=0
+\item 
+virtual bool \mbox{\hyperlink{class_expr_a92dc26078993a4b9721ea732274a435c}{has\+\_\+variable}} ()=0
+\item 
+virtual \mbox{\hyperlink{class_expr}{Expr}} $\ast$ \mbox{\hyperlink{class_expr_a23c5ef7462f3f04b93b1b983fdb45cce}{subst}} (std\+::string parameter, \mbox{\hyperlink{class_expr}{Expr}} $\ast$expr)=0
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_var_expr_aaf77b9f014561c6aafaeb95c76a8f9c3}\label{class_var_expr_aaf77b9f014561c6aafaeb95c76a8f9c3}} 
+std\+::string {\bfseries var\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_var_expr_ad8f1407b712f3c8d7c78dfd4eb0708e6}\label{class_var_expr_ad8f1407b712f3c8d7c78dfd4eb0708e6}} 
+\index{VarExpr@{VarExpr}!equals@{equals}}
+\index{equals@{equals}!VarExpr@{VarExpr}}
+\doxysubsubsection{\texorpdfstring{equals()}{equals()}}
+{\footnotesize\ttfamily bool Var\+Expr\+::equals (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_expr}{Expr}} $\ast$}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+check if two Var\+Exprs are equal 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & rhs Expr$\ast$ to be compared \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if two Var\+Exprs are equal, null if rhs is NULL 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_expr}{Expr}}.
+
+\mbox{\Hypertarget{class_var_expr_ad8e3aab06e58615fe677a7a45d6cf32e}\label{class_var_expr_ad8e3aab06e58615fe677a7a45d6cf32e}} 
+\index{VarExpr@{VarExpr}!has\_variable@{has\_variable}}
+\index{has\_variable@{has\_variable}!VarExpr@{VarExpr}}
+\doxysubsubsection{\texorpdfstring{has\_variable()}{has\_variable()}}
+{\footnotesize\ttfamily bool Var\+Expr\+::has\+\_\+variable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+returns true if the expression is a variable or contains a variable 
+
+\begin{DoxyReturn}{Returns}
+true 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_expr}{Expr}}.
+
+\mbox{\Hypertarget{class_var_expr_a79991fba1d40718c3074181d129d1ddf}\label{class_var_expr_a79991fba1d40718c3074181d129d1ddf}} 
+\index{VarExpr@{VarExpr}!interp@{interp}}
+\index{interp@{interp}!VarExpr@{VarExpr}}
+\doxysubsubsection{\texorpdfstring{interp()}{interp()}}
+{\footnotesize\ttfamily int Var\+Expr\+::interp (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+returns an int for the value of an expression 
+
+\begin{DoxyReturn}{Returns}
+throw an std\+::runtime\+\_\+error exception 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_expr}{Expr}}.
+
+\mbox{\Hypertarget{class_var_expr_afa8d617ffc16182de004bb0417a588b5}\label{class_var_expr_afa8d617ffc16182de004bb0417a588b5}} 
+\index{VarExpr@{VarExpr}!subst@{subst}}
+\index{subst@{subst}!VarExpr@{VarExpr}}
+\doxysubsubsection{\texorpdfstring{subst()}{subst()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_expr}{Expr}} $\ast$ Var\+Expr\+::subst (\begin{DoxyParamCaption}\item[{std\+::string}]{parameter,  }\item[{\mbox{\hyperlink{class_expr}{Expr}} $\ast$}]{expr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+everywhere that the expression contains a variable matching the string, the result Expr$\ast$ should have the given replacement 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parameter} & the parameter to be substituted \\
+\hline
+{\em expr} & a new expression \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a new object without changing the current object 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_expr}{Expr}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/laurazhang/msdscript/\mbox{\hyperlink{expr_8h}{expr.\+h}}\item 
+/\+Users/laurazhang/msdscript/\mbox{\hyperlink{expr_8cpp}{expr.\+cpp}}\end{DoxyCompactItemize}
